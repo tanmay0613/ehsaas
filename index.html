@@ -1,0 +1,1476 @@
+```html
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ek Tarfa Ehsaas ❤️</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Hind:wght@400;500;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#05040b;
+    color:white;
+    font-family:'Hind',sans-serif;
+    overflow-x:hidden;
+}
+
+/* ================= BACKGROUND ================= */
+
+.bg{
+    position:fixed;
+    inset:0;
+    z-index:-5;
+
+    background:
+    radial-gradient(circle at 50% 25%,rgba(180,70,140,.18),transparent 30%),
+    radial-gradient(circle at 20% 80%,rgba(60,60,150,.12),transparent 30%),
+    linear-gradient(180deg,#080614,#12091b,#05040b);
+}
+
+/* Moon */
+
+.moon{
+    position:fixed;
+    width:170px;
+    height:170px;
+    border-radius:50%;
+
+    top:12%;
+    right:12%;
+
+    background:#ffeaf4;
+
+    box-shadow:
+    0 0 30px #ffd6e7,
+    0 0 90px rgba(255,160,210,.35);
+
+    opacity:.9;
+
+    z-index:-4;
+}
+
+.moon:after{
+    content:"";
+
+    position:absolute;
+
+    width:160px;
+    height:160px;
+
+    border-radius:50%;
+
+    background:#080614;
+
+    left:-40px;
+    top:-15px;
+}
+
+/* ================= RAIN ================= */
+
+#rain{
+    position:fixed;
+    inset:0;
+
+    pointer-events:none;
+
+    z-index:-2;
+
+    overflow:hidden;
+}
+
+.drop{
+    position:absolute;
+
+    top:-100px;
+
+    width:1px;
+    height:75px;
+
+    background:
+    linear-gradient(
+        transparent,
+        rgba(190,215,255,.55)
+    );
+
+    animation:rain linear infinite;
+}
+
+@keyframes rain{
+
+    to{
+        transform:translate(50px,110vh);
+    }
+
+}
+
+/* ================= INTRO ================= */
+
+.intro{
+    position:fixed;
+
+    inset:0;
+
+    z-index:100;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    background:
+    radial-gradient(
+        circle,
+        rgba(130,45,100,.25),
+        transparent 45%
+    ),
+    #05040b;
+
+    transition:1.2s;
+}
+
+.intro.hide{
+    opacity:0;
+    pointer-events:none;
+    transform:scale(1.08);
+}
+
+.intro-box{
+    width:min(90%,700px);
+    padding:40px 20px;
+}
+
+.intro-small{
+    color:#d39ab8;
+
+    letter-spacing:5px;
+
+    font-family:Poppins;
+
+    font-size:11px;
+}
+
+.intro h1{
+    font-family:'Great Vibes';
+
+    font-size:clamp(65px,14vw,130px);
+
+    font-weight:400;
+
+    color:#ffd4e6;
+
+    margin:15px 0;
+
+    text-shadow:
+    0 0 40px rgba(255,100,180,.35);
+}
+
+.intro p{
+    color:#bbb2bd;
+
+    font-size:18px;
+
+    line-height:1.9;
+}
+
+.enter{
+    margin-top:30px;
+
+    padding:14px 30px;
+
+    border-radius:50px;
+
+    border:1px solid rgba(255,160,205,.4);
+
+    background:
+    linear-gradient(
+        135deg,
+        #b84980,
+        #57429a
+    );
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    box-shadow:
+    0 10px 40px rgba(170,60,130,.25);
+
+    transition:.4s;
+}
+
+.enter:hover{
+    transform:
+    translateY(-4px)
+    scale(1.03);
+}
+
+/* ================= NAV ================= */
+
+nav{
+    position:fixed;
+
+    top:0;
+
+    width:100%;
+
+    z-index:20;
+
+    padding:17px 6%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:
+    rgba(5,4,11,.38);
+
+    backdrop-filter:blur(15px);
+
+    border-bottom:
+    1px solid rgba(255,255,255,.06);
+}
+
+.logo{
+    font-family:'Great Vibes';
+
+    color:#ff9bc8;
+
+    font-size:32px;
+}
+
+nav a{
+    color:#bdb4c0;
+
+    text-decoration:none;
+
+    font-family:Poppins;
+
+    font-size:13px;
+
+    margin-left:22px;
+
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#ff9bc8;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    padding:120px 20px 70px;
+}
+
+.hero-content{
+    max-width:850px;
+}
+
+.eyebrow{
+    color:#d29bb9;
+
+    letter-spacing:4px;
+
+    font-family:Poppins;
+
+    font-size:11px;
+
+    text-transform:uppercase;
+}
+
+.hero h1{
+    font-family:'Great Vibes';
+
+    font-size:
+    clamp(75px,15vw,150px);
+
+    font-weight:400;
+
+    color:#ffd4e6;
+
+    line-height:1;
+
+    margin:15px 0;
+
+    text-shadow:
+    0 0 50px rgba(255,110,175,.28);
+}
+
+.hero h2{
+    font-size:
+    clamp(21px,4vw,34px);
+
+    font-weight:400;
+}
+
+.hero-description{
+    max-width:650px;
+
+    margin:20px auto 30px;
+
+    color:#aaa1ad;
+
+    line-height:1.9;
+
+    font-size:16px;
+}
+
+.glow-btn{
+    padding:14px 27px;
+
+    border-radius:50px;
+
+    border:
+    1px solid rgba(255,160,205,.35);
+
+    background:
+    rgba(255,255,255,.06);
+
+    color:white;
+
+    cursor:pointer;
+
+    backdrop-filter:blur(10px);
+
+    transition:.4s;
+}
+
+.glow-btn:hover{
+    background:#b94d84;
+
+    box-shadow:
+    0 0 35px rgba(200,70,140,.35);
+
+    transform:translateY(-3px);
+}
+
+/* ================= SECTION ================= */
+
+section{
+    padding:100px 6%;
+
+    position:relative;
+}
+
+.title{
+    text-align:center;
+
+    margin-bottom:45px;
+}
+
+.title h2{
+    font-size:42px;
+
+    font-weight:500;
+}
+
+.title h2 span{
+    color:#ff9cc8;
+}
+
+.title p{
+    color:#827a87;
+
+    font-family:Poppins;
+
+    font-size:12px;
+
+    margin-top:5px;
+}
+
+/* ================= FILTER ================= */
+
+.filters{
+    display:flex;
+
+    justify-content:center;
+
+    gap:10px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:35px;
+}
+
+.filter{
+    color:#bbb;
+
+    border:
+    1px solid rgba(255,255,255,.08);
+
+    background:
+    rgba(255,255,255,.035);
+
+    padding:9px 18px;
+
+    border-radius:30px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.filter.active,
+.filter:hover{
+    color:white;
+
+    background:#a84376;
+
+    border-color:#d26099;
+}
+
+/* ================= SHAYARI ================= */
+
+.grid{
+    max-width:1150px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(
+        auto-fit,
+        minmax(280px,1fr)
+    );
+
+    gap:22px;
+}
+
+.card{
+    position:relative;
+
+    min-height:240px;
+
+    padding:30px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    border-radius:25px;
+
+    background:
+    linear-gradient(
+        145deg,
+        rgba(255,255,255,.075),
+        rgba(255,255,255,.025)
+    );
+
+    border:
+    1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(13px);
+
+    overflow:hidden;
+
+    transition:.45s;
+}
+
+.card:hover{
+    transform:translateY(-9px);
+
+    border-color:
+    rgba(255,145,195,.3);
+
+    box-shadow:
+    0 25px 70px rgba(0,0,0,.3);
+}
+
+.shayari{
+    font-size:21px;
+
+    line-height:1.8;
+}
+
+.translation{
+    color:#a89ca9;
+
+    font-family:Poppins;
+
+    font-size:12px;
+
+    line-height:1.7;
+
+    margin-top:14px;
+}
+
+.tag{
+    color:#f090b9;
+
+    font-size:12px;
+
+    margin-top:15px;
+}
+
+/* ================= SPECIAL ================= */
+
+.special{
+    max-width:850px;
+
+    margin:auto;
+
+    text-align:center;
+
+    padding:55px 30px;
+
+    border-radius:30px;
+
+    background:
+    linear-gradient(
+        135deg,
+        rgba(177,69,125,.12),
+        rgba(76,61,146,.12)
+    );
+
+    border:
+    1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(15px);
+}
+
+.special h2{
+    font-family:'Great Vibes';
+
+    color:#ffc8df;
+
+    font-size:55px;
+
+    font-weight:400;
+}
+
+.special p{
+    color:#b7adb8;
+
+    font-size:17px;
+
+    line-height:2;
+
+    margin:15px auto;
+
+    max-width:650px;
+}
+
+/* ================= MUSIC ================= */
+
+.music{
+    max-width:600px;
+
+    margin:auto;
+}
+
+.player{
+    text-align:center;
+
+    padding:35px;
+
+    border-radius:30px;
+
+    background:
+    rgba(255,255,255,.05);
+
+    border:
+    1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(15px);
+}
+
+.disc{
+    width:120px;
+    height:120px;
+
+    margin:auto;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:
+    linear-gradient(
+        135deg,
+        #bd4d83,
+        #4d428f
+    );
+
+    box-shadow:
+    0 0 50px rgba(190,70,135,.25);
+
+    font-size:38px;
+}
+
+.player h3{
+    margin-top:20px;
+
+    font-size:22px;
+}
+
+.player p{
+    color:#928a96;
+
+    font-family:Poppins;
+
+    font-size:12px;
+
+    margin-top:4px;
+}
+
+.controls{
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:14px;
+
+    margin-top:25px;
+}
+
+.controls button{
+    border:0;
+
+    width:44px;
+    height:44px;
+
+    border-radius:50%;
+
+    background:
+    rgba(255,255,255,.08);
+
+    color:white;
+
+    cursor:pointer;
+}
+
+.controls .play{
+    background:#b7477d;
+
+    width:52px;
+    height:52px;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    text-align:center;
+
+    padding:60px 20px;
+
+    color:#665e69;
+
+    font-family:Poppins;
+
+    font-size:12px;
+}
+
+footer b{
+    color:#d67ba5;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:600px){
+
+    .moon{
+        width:120px;
+        height:120px;
+        right:5%;
+    }
+
+    nav a{
+        margin-left:8px;
+        font-size:11px;
+    }
+
+    section{
+        padding:75px 20px;
+    }
+
+    .card{
+        padding:25px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="bg"></div>
+
+<div class="moon"></div>
+
+<div id="rain"></div>
+
+
+<!-- ================= INTRO ================= -->
+
+<div class="intro" id="intro">
+
+    <div class="intro-box">
+
+        <div class="intro-small">
+            SOME FEELINGS DESERVE A WEBSITE
+        </div>
+
+        <h1>
+            Ek Tarfa Ehsaas
+        </h1>
+
+        <p>
+            ये बस एक website नहीं है...<br>
+
+            कुछ अधूरे एहसास हैं,<br>
+
+            जिन्हें शब्दों में रखने की कोशिश की है। ❤️
+        </p>
+
+        <button
+        class="enter"
+        onclick="enterSite()">
+
+            Enter My Little World ❤️
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- ================= NAV ================= -->
+
+<nav>
+
+    <div class="logo">
+        Ek Tarfa Ehsaas
+    </div>
+
+    <div>
+
+        <a href="#shayari">
+            Shayari
+        </a>
+
+        <a href="#special">
+            Special
+        </a>
+
+        <a href="#music">
+            Music
+        </a>
+
+    </div>
+
+</nav>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="eyebrow">
+            Rain • Feelings • Memories
+        </div>
+
+        <h1>
+            Ek Tarfa Ehsaas
+        </h1>
+
+        <h2>
+            कुछ लोग मिलते नहीं... महसूस होते हैं। ❤️
+        </h2>
+
+        <p class="hero-description">
+
+            कभी किसी की मुस्कान याद आती है,
+
+            कभी बारिश में उसका ख्याल...
+
+            और कभी कोई दोस्त अचानक परिवार जैसा लगने लगता है।
+
+        </p>
+
+        <button
+        class="glow-btn"
+        onclick="randomShayari()">
+
+            ✨ आज की Shayari
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SHAYARI ================= -->
+
+<section id="shayari">
+
+    <div class="title">
+
+        <h2>
+            दिल की <span>बातें</span>
+        </h2>
+
+        <p>
+            words that feel like memories
+        </p>
+
+    </div>
+
+
+    <div class="filters">
+
+        <button
+        class="filter active"
+        onclick="filter('all',this)">
+
+            ✨ All
+
+        </button>
+
+        <button
+        class="filter"
+        onclick="filter('love',this)">
+
+            ❤️ Love
+
+        </button>
+
+        <button
+        class="filter"
+        onclick="filter('dosti',this)">
+
+            🤝 Dosti
+
+        </button>
+
+        <button
+        class="filter"
+        onclick="filter('sad',this)">
+
+            🥀 Emotional
+
+        </button>
+
+        <button
+        class="filter"
+        onclick="filter('english',this)">
+
+            🌙 English
+
+        </button>
+
+    </div>
+
+
+    <div class="grid">
+
+
+        <div class="card love">
+
+            <div class="shayari">
+
+                तेरे साथ बारिश में भीगना है,<br>
+
+                और फिर उम्र भर तेरा होना है। ❤️
+
+            </div>
+
+            <div class="translation">
+
+                I don't need perfect moments,
+                just moments with you.
+
+            </div>
+
+            <div class="tag">
+                — Love
+            </div>
+
+        </div>
+
+
+        <div class="card love">
+
+            <div class="shayari">
+
+                तू पास हो तो हर मौसम खूबसूरत है,<br>
+
+                तू दूर हो तो बारिश भी अधूरी है।
+
+            </div>
+
+            <div class="translation">
+
+                Somehow,
+                you make ordinary moments magical.
+
+            </div>
+
+            <div class="tag">
+                — Someone Special
+            </div>
+
+        </div>
+
+
+        <div class="card dosti">
+
+            <div class="shayari">
+
+                दोस्ती वो नहीं जो हर रोज़ मिले,<br>
+
+                दोस्ती वो है जो हर रोज़ याद आए। 🤝
+
+            </div>
+
+            <div class="translation">
+
+                Real friends don't need
+                daily conversations.
+
+            </div>
+
+            <div class="tag">
+                — Dosti
+            </div>
+
+        </div>
+
+
+        <div class="card dosti">
+
+            <div class="shayari">
+
+                कुछ रिश्ते नाम के मोहताज नहीं होते,<br>
+
+                कुछ दोस्त दिल के बेहद खास होते हैं।
+
+            </div>
+
+            <div class="translation">
+
+                Some friendships
+                simply feel like home.
+
+            </div>
+
+            <div class="tag">
+                — Friendship
+            </div>
+
+        </div>
+
+
+        <div class="card sad">
+
+            <div class="shayari">
+
+                बारिश आज भी होती है,<br>
+
+                बस अब साथ तुम नहीं होते। 🥀
+
+            </div>
+
+            <div class="translation">
+
+                The rain stayed.
+                You didn't.
+
+            </div>
+
+            <div class="tag">
+                — Memories
+            </div>
+
+        </div>
+
+
+        <div class="card english">
+
+            <div class="shayari">
+
+                Maybe we were never meant
+                to be forever,
+                but I'm glad we happened.
+
+            </div>
+
+            <div class="translation">
+
+                कुछ लोग कहानी नहीं,
+                खूबसूरत याद बनकर रह जाते हैं।
+
+            </div>
+
+            <div class="tag">
+                — Midnight Thoughts
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ================= SPECIAL ================= -->
+
+<section id="special">
+
+    <div class="special">
+
+        <h2>
+            For Someone Special...
+        </h2>
+
+        <p>
+
+            पता नहीं तुम इसे पढ़ोगी या नहीं,
+
+            लेकिन कुछ बातें ऐसी होती हैं
+
+            जिन्हें कहने के लिए हिम्मत चाहिए...
+
+            और लिखने के लिए बस एक दिल। ❤️
+
+        </p>
+
+
+        <button
+        class="glow-btn"
+        onclick="showSecret()">
+
+            💌 एक बात कहूँ?
+
+        </button>
+
+
+        <p
+        id="secret"
+        style="display:none;color:#f3b2d0;">
+
+            तुम खूबसूरत हो...
+
+            सिर्फ दिखने में नहीं,
+
+            उस एहसास में भी
+
+            जो तुम्हारे होने से आता है। ❤️
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= MUSIC ================= -->
+
+<section id="music">
+
+    <div class="title">
+
+        <h2>
+            Tonight's <span>Vibe</span> 🎧
+        </h2>
+
+        <p>
+            बारिश सुनो... बाकी दिल समझ जाएगा।
+        </p>
+
+    </div>
+
+
+    <div class="music">
+
+        <div class="player">
+
+            <div class="disc">
+                ♫
+            </div>
+
+            <h3 id="songTitle">
+                Rain & Romance
+            </h3>
+
+            <p id="songMood">
+                Soft romantic instrumental
+            </p>
+
+
+            <div class="controls">
+
+                <button
+                onclick="previousSong()">
+                    ⏮
+                </button>
+
+                <button
+                class="play"
+                onclick="toggleMusic()"
+                id="play">
+
+                    ▶
+
+                </button>
+
+                <button
+                onclick="nextSong()">
+
+                    ⏭
+
+                </button>
+
+            </div>
+
+
+            <input
+            type="range"
+            id="volume"
+            min="0"
+            max="1"
+            step=".01"
+            value=".45"
+            style="margin-top:25px;width:180px;"
+            >
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    Made with <b>♥</b> and a little bit of rain.
+
+    <br><br>
+
+    <b>Ek Tarfa Ehsaas</b>
+    — Where feelings become words.
+
+    <br><br>
+
+    Designed & Developed with ❤️ by
+    <b>Tanmay</b>
+
+</footer>
+
+
+<audio id="audio"></audio>
+
+
+<script>
+
+/* ================= RAIN ================= */
+
+const rain =
+document.getElementById("rain");
+
+for(let i=0;i<130;i++){
+
+    const drop =
+    document.createElement("div");
+
+    drop.className="drop";
+
+    drop.style.left =
+    Math.random()*100+"%";
+
+    drop.style.animationDuration =
+    (.55+Math.random()*1.2)+"s";
+
+    drop.style.animationDelay =
+    Math.random()*3+"s";
+
+    drop.style.opacity =
+    .15+Math.random()*.45;
+
+    rain.appendChild(drop);
+
+}
+
+
+/* ================= ENTER ================= */
+
+function enterSite(){
+
+    document
+    .getElementById("intro")
+    .classList.add("hide");
+
+}
+
+
+/* ================= FILTER ================= */
+
+function filter(type,btn){
+
+    document
+    .querySelectorAll(".filter")
+    .forEach(x=>
+        x.classList.remove("active")
+    );
+
+    btn.classList.add("active");
+
+    document
+    .querySelectorAll(".card")
+    .forEach(card=>{
+
+        if(
+            type==="all" ||
+            card.classList.contains(type)
+        ){
+
+            card.style.display="flex";
+
+        }else{
+
+            card.style.display="none";
+
+        }
+
+    });
+
+}
+
+
+/* ================= SECRET ================= */
+
+function showSecret(){
+
+    const secret =
+    document.getElementById("secret");
+
+    secret.style.display="block";
+
+}
+
+
+/* ================= RANDOM SHAYARI ================= */
+
+const lines=[
+
+`तेरी मुस्कान का असर कुछ ऐसा है,
+कि उदास दिल भी मुस्कुरा देता है। ❤️`,
+
+`बारिश की बूंदों में तेरा ख्याल आता है,
+शायद मौसम भी तुझे याद करता है। 🌧️`,
+
+`कुछ दोस्त जिंदगी में ऐसे मिलते हैं,
+जिनसे मिलकर लगता है घर मिल गया। 🤝`,
+
+`तुम्हें चाहना कोई मजबूरी नहीं,
+बस दिल की सबसे खूबसूरत आदत है। ❤️`,
+
+`Some people don't enter your life,
+they quietly become a part of your heart. 🌙`
+
+];
+
+
+function randomShayari(){
+
+    const random =
+    lines[
+        Math.floor(
+            Math.random()*lines.length
+        )
+    ];
+
+    alert(random);
+
+}
+
+
+/* ================= MUSIC ================= */
+
+const songs=[
+
+    {
+        title:"Rain & Romance",
+        mood:"Soft romantic instrumental",
+        file:"music/rain.mp3"
+    },
+
+    {
+        title:"Midnight Feelings",
+        mood:"Dreamy • Calm • Emotional",
+        file:"music/midnight.mp3"
+    },
+
+    {
+        title:"Love In The Rain",
+        mood:"Romantic instrumental",
+        file:"music/love.mp3"
+    }
+
+];
+
+
+let current=0;
+
+const audio =
+document.getElementById("audio");
+
+const play =
+document.getElementById("play");
+
+
+function loadSong(){
+
+    audio.src =
+    songs[current].file;
+
+    document
+    .getElementById("songTitle")
+    .textContent =
+    songs[current].title;
+
+    document
+    .getElementById("songMood")
+    .textContent =
+    songs[current].mood;
+
+}
+
+
+function toggleMusic(){
+
+    if(audio.paused){
+
+        audio.play()
+        .then(()=>{
+
+            play.textContent="⏸";
+
+        })
+        .catch(()=>{
+
+            alert(
+            "Music file nahi mili. " +
+            "music folder me MP3 add karo."
+            );
+
+        });
+
+    }else{
+
+        audio.pause();
+
+        play.textContent="▶";
+
+    }
+
+}
+
+
+function nextSong(){
+
+    current =
+    (current+1)%songs.length;
+
+    loadSong();
+
+    audio.play()
+    .then(()=>
+        play.textContent="⏸"
+    );
+
+}
+
+
+function previousSong(){
+
+    current =
+    (current-1+songs.length)
+    %songs.length;
+
+    loadSong();
+
+    audio.play()
+    .then(()=>
+        play.textContent="⏸"
+    );
+
+}
+
+
+document
+.getElementById("volume")
+.addEventListener(
+    "input",
+    function(){
+
+        audio.volume=this.value;
+
+    }
+);
+
+
+audio.addEventListener(
+    "ended",
+    nextSong
+);
+
+
+audio.volume=.45;
+
+loadSong();
+
+</script>
+
+</body>
+</html>
+```
